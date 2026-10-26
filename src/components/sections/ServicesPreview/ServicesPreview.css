@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Services Preview Section - M.S TIDALYN
+   Displaying the 5 core real services
+   ========================================================================== */
+
+.services-preview-section {
+  padding: var(--space-20) 0;
+  position: relative;
+  background-color: var(--bg-canvas);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.services-preview-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-preview-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.services-preview-lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* 5 Services Grid (3 on top row, 2 centered or wide on bottom row) */
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+@media (max-width: 1024px) {
+  .services-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.services-preview-card {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.services-preview-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-sky-300);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.08);
+}
+
+.services-preview-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-sky-400);
+  opacity: 0.6;
+}
+
+.services-preview-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.services-preview-card__cat {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-sky-500);
+}
+
+.services-preview-card__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-sky-50);
+  border: 1px solid var(--color-sky-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sky-500);
+  transition: transform 0.2s ease;
+}
+
+.services-preview-card:hover .services-preview-card__icon-wrap {
+  transform: scale(1.08);
+}
+
+.services-preview-card__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.services-preview-card__desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.services-preview-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.services-preview-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-snug);
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  color: var(--color-sky-500);
+  margin-top: 2px;
+}
+
+.services-preview-card__tech {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tech-heading {
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-tertiary);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tech-tag {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  background-color: #f1f5f9;
+  color: var(--color-navy-850);
+  border-radius: var(--radius-sm);
+  border: 1px solid #e2e8f0;
+}
+
+.services-preview-footer {
+  text-align: center;
+}

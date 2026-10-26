@@ -1,0 +1,230 @@
+/* ==========================================================================
+   How We Work Section - M.S TIDALYN
+   Structured 6-step engineering methodology
+   ========================================================================== */
+
+.how-we-work-section {
+  padding: var(--space-20) 0;
+  position: relative;
+  background-color: var(--bg-canvas);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.how-we-work-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-we-work-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.how-we-work-lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* 6-step Grid */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+@media (max-width: 1024px) {
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Workflow Card */
+.workflow-card {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-7);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.workflow-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-sky-300);
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.07);
+}
+
+.workflow-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.workflow-card__step-num {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-extrabold);
+  color: #cbd5e1;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.workflow-card:hover .workflow-card__step-num {
+  color: var(--color-sky-400);
+  transition: color 0.2s ease;
+}
+
+.workflow-card__icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-sky-50);
+  border: 1px solid var(--color-sky-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-sky-500);
+}
+
+.workflow-card__title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.workflow-card__subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-sky-500);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.workflow-card__desc {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+/* Deliverables list */
+.workflow-card__deliverables {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid #f1f5f9;
+}
+
+.deliverables-heading {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wider);
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--space-2);
+}
+
+.deliverables-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-snug);
+}
+
+.deliverable-icon {
+  flex-shrink: 0;
+  color: var(--color-sky-500);
+  margin-top: 2px;
+}
+
+/* Principles / Guarantees Strip */
+.workflow-guarantees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  padding: var(--space-8);
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+}
+
+@media (max-width: 900px) {
+  .workflow-guarantees {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+.workflow-guarantee-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.guarantee-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  color: var(--color-sky-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.guarantee-title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.guarantee-desc {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  margin: 0;
+}

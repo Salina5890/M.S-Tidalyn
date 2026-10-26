@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.admin == true ||
+        request.auth.token.role == 'admin'
+      );
+    }
+
+    function isValidInquiry(data) {
+      let incoming = data;
+      return incoming.size() >= 7 && incoming.size() <= 12
+        && incoming.fullName is string && incoming.fullName.size() >= 2 && incoming.fullName.size() <= 100
+        && incoming.email is string && incoming.email.matches('^[^@]+@[^@]+\\.[^@]+$')
+        && incoming.message is string && incoming.message.size() >= 10 && incoming.message.size() <= 3000
+        && incoming.serviceInterest is string && incoming.serviceInterest.size() <= 100
+        && incoming.status == 'new'
+        && incoming.source == 'web_contact_form';
+    }
+
+    // Business Inquiries Collection
+    match /projectInquiries/{inquiryId} {
+      // 1. Anyone on the web can submit a valid inquiry (create only)
+      allow create: if isValidInquiry(request.resource.data);
+
+      // 2. Public users cannot read other people's inquiries
+      // Only authenticated administrators can read submitted inquiries
+      allow read: if isAdmin();
+
+      // 3. Public users cannot edit or update inquiries (e.g. change status)
+      // Only administrators can update inquiry statuses or assign them
+      allow update: if isAdmin();
+
+      // 4. Inquiries cannot be deleted by public visitors
+      allow delete: if isAdmin();
+    }
+
+    // Default deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

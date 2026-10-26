@@ -1,0 +1,17 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.brand-logo:hover {
+  opacity: 0.95;
+}
+
+.brand-logo img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
