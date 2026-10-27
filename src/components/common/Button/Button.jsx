@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Button.css';
 
 /**
- * Reusable Button component for M.S Tidalyn
+ * Reusable Button component for M.S Solutions
  *
  * @param {'primary' | 'secondary' | 'outline' | 'ghost'} variant - Visual style variant
  * @param {'sm' | 'md' | 'lg'} size - Button size

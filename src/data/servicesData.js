@@ -1,5 +1,5 @@
 /**
- * M.S Tidalyn - Official Services Data
+ * M.S Solutions - Official Services Data
  * Contains all service offerings with descriptions, features, and tech stacks.
  */
 

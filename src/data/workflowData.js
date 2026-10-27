@@ -1,5 +1,5 @@
 /**
- * M.S TIDALYN - Engineering Methodology & Workflow
+ * M.S SOLUTIONS - Engineering Methodology & Workflow
  * 
  * 6-step transparent development process detailing how our team
  * approaches every engineering engagement with rigor, agility, and clarity.

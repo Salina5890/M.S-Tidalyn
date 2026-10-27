@@ -1,5 +1,5 @@
 /**
- * M.S TIDALYN - Firebase Configuration & Services
+ * M.S SOLUTIONS - Firebase Configuration & Services
  * Reusable client SDK initialization for Cloud Firestore and Authentication.
  */
 import { initializeApp, getApps, getApp } from 'firebase/app';

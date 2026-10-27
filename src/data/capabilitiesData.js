@@ -1,9 +1,9 @@
 /**
- * M.S TIDALYN - Capabilities & Conceptual Architecture Data
+ * M.S SOLUTIONS - Capabilities & Conceptual Architecture Data
  * 
  * IMPORTANT CONTENT RULE:
  * This data represents forward-looking architectural blueprints and technical
- * capabilities engineered by M.S TIDALYN. These are clearly designated as conceptual
+ * capabilities engineered by M.S SOLUTIONS. These are clearly designated as conceptual
  * models to demonstrate engineering patterns and technical competencies honestly
  * without claiming completed past client deliveries or fictitious case studies.
  */

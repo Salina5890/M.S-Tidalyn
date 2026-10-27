@@ -1,21 +1,21 @@
 /**
- * Brand & Navigation Constants for M.S Tidalyn
+ * Brand & Navigation Constants for M.S Solutions
  * Phase 1 Foundation
  */
 
 export const BRAND = {
-  name: 'M.S SOLUTIONS & TIDALYN',
-  shortName: 'M.S Tidalyn',
+  name: 'M.S SOLUTIONS',
+  shortName: 'M.S Solutions',
   companyName: 'M.S Solutions',
-  displayName: 'M.S Solutions - M.S Tidalyn',
+  displayName: 'M.S Solutions',
   slogan: 'Powering Businesses Through Technology.',
   email: 'mstidayln5@gmail.com',
   instagram: 'https://www.instagram.com/mstidalyn5/',
-  instagramHandle: '@mstidalyn5',
+  instagramHandle: '@mssolutions',
   linkedin: 'https://www.linkedin.com/company/mstidalyn',
-  linkedinHandle: 'M.S TIDALYN',
+  linkedinHandle: 'M.S SOLUTIONS',
   description:
-    'M.S Solutions & M.S Tidalyn engine purpose-built SaaS products, intelligent school platforms, and high-performance digital software for growing enterprises.',
+    'M.S Solutions engines purpose-built SaaS products, intelligent school platforms, and high-performance digital software for growing enterprises.',
   foundingVision:
     'Powering global organizations with modern digital craftsmanship, scalable SaaS architectures, and transformative software solutions.',
 };
@@ -41,7 +41,7 @@ export const FOOTER_SECTIONS = [
   {
     title: 'Company',
     links: [
-      { label: 'About M.S Tidalyn', href: '/about' },
+      { label: 'About M.S Solutions', href: '/about' },
       { label: 'Our Philosophy', href: '/about#philosophy' },
       { label: 'Contact & Inquiries', href: '/contact' },
     ],

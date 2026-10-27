@@ -28,7 +28,7 @@ const ICON_MAP = {
 
 /**
  * ServicesPage Component
- * Showcases all M.S Tidalyn service offerings in a premium card layout.
+ * Showcases all M.S Solutions service offerings in a premium card layout.
  */
 export function ServicesPage() {
   useScrollReveal();

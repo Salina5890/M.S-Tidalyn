@@ -155,7 +155,7 @@ export function ContactPage() {
             rel="noopener noreferrer"
             className="contact-channel-item reveal-on-scroll reveal-delay-2"
             title="Visit our official Instagram profile (opens in new tab)"
-            aria-label="Instagram profile @mstidalyn5"
+            aria-label="Visit our official Instagram profile"
           >
             <div className="contact-channel-item__icon" aria-hidden="true">
               <Instagram size={20} />

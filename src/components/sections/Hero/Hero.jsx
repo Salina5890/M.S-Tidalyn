@@ -6,7 +6,7 @@ import { BRAND } from '../../../utils/navigation';
 import './Hero.css';
 
 /**
- * Hero Section for M.S Tidalyn Homepage
+ * Hero Section for M.S Solutions Homepage
  * Highlights Company Name, Exact Slogan, Primary CTA, and Strategic Focus Areas.
  */
 export function Hero() {
@@ -85,7 +85,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Hero Visual Presentation (Subtle M.S Tidalyn Aerodynamics & Oceanic Atmosphere) */}
+        {/* Hero Visual Presentation (Subtle M.S Solutions Aerodynamics & Oceanic Atmosphere) */}
         <div className="hero-section__visual animate-float" aria-hidden="true">
           <div className="hero-visual-card">
             {/* Ambient Card Header */}
@@ -107,7 +107,7 @@ export function Hero() {
                 <div className="blueprint-node__indicator" />
                 <div className="blueprint-node__content">
                   <span className="blueprint-node__category">Foundational SaaS Core</span>
-                  <span className="blueprint-node__label">M.S Tidalyn Cloud Framework</span>
+                  <span className="blueprint-node__label">M.S Solutions Cloud Framework</span>
                 </div>
               </div>
 

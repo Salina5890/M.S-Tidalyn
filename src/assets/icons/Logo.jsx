@@ -2,7 +2,7 @@ import React from 'react';
 import exactLogoImg from '../../../assets/M.S Solutions logo.png';
 
 /**
- * M.S SOLUTIONS / M.S TIDALYN Official Brand Logo Component
+ * M.S SOLUTIONS Official Brand Logo Component
  * Renders the official brand logo from the assets folder.
  */
 export function Logo({
@@ -11,7 +11,7 @@ export function Logo({
   width,
   height,
   className = '',
-  alt = 'M.S Solutions - M.S Tidalyn | Powering Businesses Through Technology',
+  alt = 'M.S Solutions | Powering Businesses Through Technology',
 }) {
   const finalHeight = height || size || 74;
   const finalWidth = width || (height ? 'auto' : `${finalHeight}px`);
@@ -42,5 +42,5 @@ export function Logo({
   );
 }
 
-export { Logo as MsTidalynLogo };
+export { Logo as MsSolutionsLogo };
 export default Logo;

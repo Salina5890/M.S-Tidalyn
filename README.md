@@ -1,14 +1,14 @@
-# M.S Solutions &bull; M.S Tidalyn Corporate Website
+# M.S Solutions Corporate Website
 
 > **“Powering Businesses Through Technology.”**
 
-Welcome to the official web platform repository for **M.S Solutions / M.S Tidalyn**. This project establishes a modern, responsive, and scalable frontend architecture designed to support the company's proprietary SaaS products, edtech tools for small schools, and solutions for software businesses.
+Welcome to the official web platform repository for **M.S Solutions**. This project establishes a modern, responsive, and scalable frontend architecture designed to support the company's proprietary SaaS products, edtech tools for small schools, and solutions for software businesses.
 
 ---
 
 ## Brand Identity & Design System
 
-- **Company Name:** M.S Solutions &bull; M.S Tidalyn
+- **Company Name:** M.S Solutions
 - **Slogan:** *“Powering Businesses Through Technology.”*
 - **Visual Aesthetic:** Dreamy, oceanic, premium, innovative, and trustworthy.
 - **Color Palette:**
@@ -35,7 +35,7 @@ Welcome to the official web platform repository for **M.S Solutions / M.S Tidaly
 ## Directory Structure
 
 ```text
-MS-TIDALYN/
+MS-SOLUTIONS/
 ├── public/
 │   └── favicon.svg               # Stylized brand & wave icon
 ├── src/
