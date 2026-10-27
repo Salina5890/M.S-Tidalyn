@@ -33,7 +33,7 @@ export function Header() {
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
       <div className="container site-header__inner">
         {/* Brand Logo */}
-        <Link to="/" className="site-header__brand" aria-label="M.S TIDALYN Home">
+        <Link to="/" className="site-header__brand" aria-label="M.S Solutions - M.S Tidalyn Home">
           <Logo variant="full" size={76} />
         </Link>
 

@@ -4,8 +4,10 @@
  */
 
 export const BRAND = {
-  name: 'M.S TIDALYN',
+  name: 'M.S SOLUTIONS & TIDALYN',
   shortName: 'M.S Tidalyn',
+  companyName: 'M.S Solutions',
+  displayName: 'M.S Solutions - M.S Tidalyn',
   slogan: 'Powering Businesses Through Technology.',
   email: 'mstidayln5@gmail.com',
   instagram: 'https://www.instagram.com/mstidalyn5/',
@@ -13,9 +15,9 @@ export const BRAND = {
   linkedin: 'https://www.linkedin.com/company/mstidalyn',
   linkedinHandle: 'M.S TIDALYN',
   description:
-    'An emerging software startup engineering purpose-built SaaS products and reliable digital solutions for educational institutions and growing businesses.',
+    'M.S Solutions & M.S Tidalyn engine purpose-built SaaS products, intelligent school platforms, and high-performance digital software for growing enterprises.',
   foundingVision:
-    'Empowering modern organizations through resilient engineering and purpose-driven cloud technology.',
+    'Powering global organizations with modern digital craftsmanship, scalable SaaS architectures, and transformative software solutions.',
 };
 
 export const NAV_LINKS = [

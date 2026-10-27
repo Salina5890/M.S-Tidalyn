@@ -1,18 +1,18 @@
 import React from 'react';
-import logoImage from '../../../../assets/logo.png';
+import logoImage from '../../../../assets/M.S Solutions logo.png';
 import './Logo.css';
 
 /**
- * M.S TIDALYN Official Brand Logo Component
- * Renders the official brand logo from the project's assets folder (assets/logo.png).
+ * M.S SOLUTIONS / M.S TIDALYN Official Brand Logo Component
+ * Renders the official brand logo from the assets folder.
  */
 export function Logo({
   variant = 'full', // 'icon' | 'full' | 'badge'
-  size = 74,
+  size = 76,
   width,
   height,
   className = '',
-  alt = 'M.S TIDALYN - Powering Businesses Through Technology.',
+  alt = 'M.S Solutions - M.S Tidalyn | Powering Businesses Through Technology',
 }) {
   const finalHeight = height || size || 74;
   const finalWidth = width || (height ? 'auto' : `${finalHeight}px`);

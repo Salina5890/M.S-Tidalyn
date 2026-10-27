@@ -19,8 +19,8 @@ export function Footer() {
       <div className="container site-footer__main">
         <div className="site-footer__grid">
           <div className="site-footer__brand-col">
-            <Link to="/" className="site-footer__brand-link" aria-label="M.S TIDALYN Home">
-              <Logo size={68} />
+            <Link to="/" className="site-footer__brand-link" aria-label="M.S Solutions - M.S Tidalyn Home">
+              <Logo size={70} />
             </Link>
 
             <p className="site-footer__desc">
@@ -91,6 +91,16 @@ export function Footer() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Bottom Company Recognition Bar */}
+        <div className="site-footer__bottom">
+          <p className="site-footer__copyright">
+            &copy; {new Date().getFullYear()} <strong>M.S Solutions &bull; M.S Tidalyn</strong>. All rights reserved.
+          </p>
+          <p className="site-footer__slogan">
+            &ldquo;{BRAND.slogan}&rdquo;
+          </p>
         </div>
       </div>
     </footer>
