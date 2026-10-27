@@ -19,56 +19,53 @@ export function Footer() {
       <div className="container site-footer__main">
         <div className="site-footer__grid">
           <div className="site-footer__brand-col">
-            <Link to="/" className="site-footer__brand-link" aria-label="M.S Solutions Home">
-              <Logo size={70} />
+            <Link to="/" className="site-footer__brand-badge" aria-label="M.S Solutions Home">
+              <Logo size={44} />
             </Link>
 
             <p className="site-footer__desc">
               {BRAND.description}
             </p>
 
-            {/* Direct Channels */}
-            <div className="site-footer__socials">
+            {/* Direct Connected Channels */}
+            <div className="site-footer__social-row">
               <a
                 href={`mailto:${BRAND.email}`}
-                className="site-footer__social-link"
-                aria-label={`Email ${BRAND.email}`}
+                className="site-footer__social-circle"
+                aria-label={`Email us at ${BRAND.email}`}
                 title={`Email: ${BRAND.email}`}
               >
-                <Mail size={16} />
-                <span>{BRAND.email}</span>
-              </a>
-              <a
-                href={BRAND.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="site-footer__social-link"
-                aria-label="Instagram profile"
-                title="Follow us on Instagram"
-              >
-                <Instagram size={16} />
-                <span>{BRAND.instagramHandle}</span>
+                <Mail size={17} />
               </a>
               <a
                 href={BRAND.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="site-footer__social-link"
-                aria-label="LinkedIn profile"
-                title="Connect on LinkedIn"
+                className="site-footer__social-circle"
+                aria-label="Connect on LinkedIn"
+                title="LinkedIn Company Page"
               >
-                <Linkedin size={16} />
-                <span>{BRAND.linkedinHandle}</span>
+                <Linkedin size={17} />
+              </a>
+              <a
+                href={BRAND.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-footer__social-circle"
+                aria-label="Follow us on Instagram"
+                title="Instagram Profile"
+              >
+                <Instagram size={17} />
               </a>
             </div>
 
             <div className="site-footer__trust-tag">
-              <ShieldCheck size={16} className="site-footer__trust-icon" />
-              <span>Dedicated to reliability, scalability & digital clarity</span>
+              <ShieldCheck size={15} className="site-footer__trust-icon" />
+              <span>Reliable Engineering &bull; Modern Cloud Systems</span>
             </div>
           </div>
 
-          {/* Navigation Columns */}
+          {/* 3 Balanced Navigation Columns */}
           <div className="site-footer__nav-cols">
             {FOOTER_SECTIONS.map((section) => (
               <div key={section.title} className="site-footer__col">
@@ -101,6 +98,13 @@ export function Footer() {
           <p className="site-footer__slogan">
             &ldquo;{BRAND.slogan}&rdquo;
           </p>
+          <div className="site-footer__bottom-links">
+            <Link to="/about" className="site-footer__bottom-link">About</Link>
+            <span className="dot-divider">&bull;</span>
+            <Link to="/services" className="site-footer__bottom-link">Services</Link>
+            <span className="dot-divider">&bull;</span>
+            <Link to="/contact" className="site-footer__bottom-link">Contact</Link>
+          </div>
         </div>
       </div>
     </footer>

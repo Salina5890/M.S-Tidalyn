@@ -24,33 +24,33 @@ export function AboutPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-6)' }}>
           <div className="glass-panel reveal-on-scroll reveal-delay-1" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ color: 'var(--color-sky-400)', marginBottom: 'var(--space-4)' }}>
-              <Layers size={28} />
+            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
+              <Layers size={24} />
             </div>
             <h3 style={{ marginBottom: 'var(--space-2)' }}>The Philosophy</h3>
-            <p>
+            <p style={{ color: '#475569', lineHeight: 1.6 }}>
               Great software should operate with effortless efficiency, eliminating complexity and empowering
               organizations to focus on what matters most.
             </p>
           </div>
 
           <div className="glass-panel reveal-on-scroll reveal-delay-2" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ color: 'var(--color-sky-400)', marginBottom: 'var(--space-4)' }}>
-              <HeartHandshake size={28} />
+            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
+              <HeartHandshake size={24} />
             </div>
             <h3 style={{ marginBottom: 'var(--space-2)' }}>Our Dedication</h3>
-            <p>
+            <p style={{ color: '#475569', lineHeight: 1.6 }}>
               We focus on serving small schools and emerging software businesses—organizations
               that need high-caliber engineering without bloated costs or needless overhead.
             </p>
           </div>
 
           <div className="glass-panel reveal-on-scroll reveal-delay-3" style={{ padding: 'var(--space-8)' }}>
-            <div style={{ color: 'var(--color-sky-400)', marginBottom: 'var(--space-4)' }}>
-              <ShieldCheck size={28} />
+            <div style={{ width: 48, height: 48, borderRadius: 'var(--radius-lg)', background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', boxShadow: '0 6px 16px rgba(2, 132, 199, 0.25)', marginBottom: 'var(--space-4)' }}>
+              <ShieldCheck size={24} />
             </div>
             <h3 style={{ marginBottom: 'var(--space-2)' }}>Integrity & Trust</h3>
-            <p>
+            <p style={{ color: '#475569', lineHeight: 1.6 }}>
               We craft every line of code with longevity in mind, avoiding fragile shortcuts
               in favor of dependable, secure architectures.
             </p>

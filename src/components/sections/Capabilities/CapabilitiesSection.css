@@ -1,12 +1,12 @@
 /* ==========================================================================
    Capabilities Section - M.S SOLUTIONS
-   Clean, honest, architectural blueprint presentation
+   Clean, architectural blueprint presentation & balanced card UI
    ========================================================================== */
 
 .capabilities-section {
   padding: var(--space-20) 0;
   position: relative;
-  background-color: var(--bg-canvas);
+  background-color: #fafbfc;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -22,48 +22,47 @@
 .capabilities-title {
   font-family: var(--font-family-display);
   font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: var(--font-weight-bold);
+  font-weight: 700;
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
   margin-top: var(--space-4);
   margin-bottom: var(--space-4);
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: -0.03em;
 }
 
 .capabilities-lead {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-relaxed);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
+  margin: 0 0 var(--space-6) 0;
 }
 
-/* Transparency Disclaimer Pill */
+/* Transparency Notice Pill */
 .capabilities-transparency-notice {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-3) var(--space-5);
-  background-color: var(--color-sky-50);
-  border: 1px solid var(--color-sky-200);
+  padding: 0.65rem 1.25rem;
+  background: #ffffff;
+  border: 1px solid #bae6fd;
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
-  color: var(--color-sky-600);
-  line-height: var(--line-height-normal);
+  font-size: 0.85rem;
+  color: #0369a1;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.06);
   text-align: left;
-  max-width: 740px;
 }
 
 .capabilities-transparency-notice .notice-icon {
   flex-shrink: 0;
-  color: var(--color-sky-500);
+  color: #0284c7;
 }
 
 .capabilities-transparency-notice strong {
-  color: var(--color-sky-600);
-  font-weight: var(--font-weight-semibold);
+  color: #075985;
+  font-weight: 600;
 }
 
-/* Capabilities Grid */
+/* Capabilities 2x2 Grid */
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -78,15 +77,16 @@
   }
 }
 
-/* Capability Card */
+/* Capability Blueprint Card */
 .capability-card {
   position: relative;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-2xl);
   padding: var(--space-8);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.28s ease,
               border-color 0.28s ease;
@@ -94,9 +94,9 @@
 }
 
 .capability-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-sky-300);
-  box-shadow: 0 12px 30px rgba(2, 132, 199, 0.08);
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 35px -4px rgba(2, 132, 199, 0.12);
 }
 
 .capability-card__accent {
@@ -104,48 +104,46 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-sky-400), var(--color-ocean-teal));
-  opacity: 0.8;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
 }
 
 .capability-card__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
 }
 
 .capability-card__icon-wrap {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-lg);
-  background: var(--color-sky-50);
-  border: 1px solid var(--color-sky-100);
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-sky-500);
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.25);
+  transition: transform 0.25s ease;
 }
 
 .capability-card:hover .capability-card__icon-wrap {
-  transform: scale(1.05);
-  background-color: var(--color-sky-100);
+  transform: scale(1.06);
 }
 
 .capability-card__status-pill {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 0.25rem 0.75rem;
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  padding: 0.3rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: var(--letter-spacing-wider);
   text-transform: uppercase;
-  color: var(--color-sky-600);
-  background-color: var(--color-sky-50);
-  border: 1px solid var(--color-sky-200);
+  color: #0284c7;
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
   border-radius: var(--radius-full);
 }
 
@@ -153,82 +151,84 @@
   width: 6px;
   height: 6px;
   border-radius: var(--radius-full);
-  background-color: var(--color-sky-500);
+  background-color: #0284c7;
 }
 
 .capability-card__domain {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
-  color: var(--color-text-tertiary);
+  color: #64748b;
   margin-bottom: var(--space-2);
 }
 
 .capability-card__title {
   font-family: var(--font-family-display);
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-1);
-  letter-spacing: var(--letter-spacing-tight);
+  letter-spacing: -0.02em;
 }
 
 .capability-card__tagline {
-  font-size: var(--font-size-sm);
-  color: var(--color-sky-500);
-  font-weight: var(--font-weight-medium);
+  font-size: 0.88rem;
+  color: #0284c7;
+  font-weight: 600;
   margin-bottom: var(--space-4);
 }
 
 .capability-card__summary {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-normal);
-  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
   margin-bottom: var(--space-5);
 }
 
-/* Problem Box */
+/* Core Objective Box */
 .capability-card__problem-box {
-  background-color: #fafbfc;
-  border-left: 3px solid var(--color-sky-400);
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #0284c7;
   padding: var(--space-3) var(--space-4);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-radius: var(--radius-md);
   margin-bottom: var(--space-5);
 }
 
 .problem-box__label {
   display: block;
-  font-size: 0.7rem;
-  font-weight: var(--font-weight-bold);
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
-  color: var(--color-text-tertiary);
-  margin-bottom: 2px;
+  color: #64748b;
+  margin-bottom: 3px;
 }
 
 .problem-box__text {
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-normal);
-  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #334155;
   margin: 0;
+  font-weight: 500;
 }
 
-/* Highlights */
+/* Key Highlights Section */
 .capability-card__highlights-section {
   margin-top: auto;
   margin-bottom: var(--space-5);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid #f1f5f9;
 }
 
 .highlights-title {
   display: block;
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
-  color: var(--color-text-tertiary);
+  color: #64748b;
   margin-bottom: var(--space-3);
 }
 
@@ -236,8 +236,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-2);
 }
 
@@ -245,32 +245,32 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-2);
-  font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-snug);
+  font-size: 0.825rem;
+  color: #334155;
+  line-height: 1.45;
 }
 
 .highlight-icon {
   flex-shrink: 0;
-  color: var(--color-sky-500);
+  color: #0284c7;
   margin-top: 2px;
 }
 
 /* Footer / Tech stack */
 .capability-card__footer {
   padding-top: var(--space-4);
-  border-top: 1px dashed var(--border-subtle);
+  border-top: 1px solid #f1f5f9;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
 }
 
 .tech-stack-label {
-  font-size: 0.7rem;
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wider);
-  color: var(--color-text-tertiary);
+  color: #64748b;
 }
 
 .capability-card__tech-tags {
@@ -280,71 +280,75 @@
 }
 
 .capability-tech-pill {
-  padding: 0.2rem 0.6rem;
+  padding: 0.22rem 0.6rem;
   font-size: 0.75rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   background-color: #f1f5f9;
-  color: var(--color-navy-850);
+  color: #1e293b;
   border-radius: var(--radius-sm);
   border: 1px solid #e2e8f0;
 }
 
-/* Bottom CTA Strip */
+/* Capabilities Callout Box */
 .capabilities-cta {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-2xl);
   padding: var(--space-8) var(--space-10);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-8);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
 }
 
-.capabilities-cta__content {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-5);
-  max-width: 720px;
-}
-
-.capabilities-cta__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-lg);
-  background-color: var(--color-sky-50);
-  border: 1px solid var(--color-sky-100);
-  color: var(--color-sky-500);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.capabilities-cta__title {
-  font-family: var(--font-family-display);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.capabilities-cta__desc {
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-normal);
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .capabilities-cta {
     flex-direction: column;
-    align-items: stretch;
+    text-align: center;
     padding: var(--space-6);
   }
 
   .capabilities-cta__content {
     flex-direction: column;
   }
+}
+
+.capabilities-cta__content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  max-width: 650px;
+}
+
+.capabilities-cta__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.capabilities-cta__title {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.capabilities-cta__desc {
+  font-size: 0.88rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.capabilities-cta__action {
+  flex-shrink: 0;
 }

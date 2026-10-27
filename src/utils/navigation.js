@@ -30,12 +30,12 @@ export const NAV_LINKS = [
 
 export const FOOTER_SECTIONS = [
   {
-    title: 'Services',
+    title: 'Core Services',
     links: [
       { label: 'Web App Development', href: '/services' },
       { label: 'Mobile App Development', href: '/services' },
-      { label: 'SaaS Products', href: '/services' },
-      { label: 'School Websites', href: '/services' },
+      { label: 'SaaS Products & Cloud', href: '/services' },
+      { label: 'Educational Portals', href: '/services' },
     ],
   },
   {
@@ -43,22 +43,16 @@ export const FOOTER_SECTIONS = [
     links: [
       { label: 'About M.S Solutions', href: '/about' },
       { label: 'Our Philosophy', href: '/about#philosophy' },
+      { label: 'Engineering Blueprints', href: '/#capabilities-heading' },
       { label: 'Contact & Inquiries', href: '/contact' },
     ],
   },
   {
-    title: 'Connect',
-    links: [
-      { label: 'Email Us', href: 'mailto:mstidayln5@gmail.com' },
-      { label: 'Instagram', href: 'https://www.instagram.com/mstidalyn5/' },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/company/mstidalyn' },
-    ],
-  },
-  {
-    title: 'Legal',
+    title: 'Legal & Trust',
     links: [
       { label: 'Privacy Policy', href: '#' },
       { label: 'Terms of Service', href: '#' },
+      { label: 'Security & Quality Standards', href: '#' },
     ],
   },
 ];

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Monitor,
   Smartphone,
@@ -40,25 +41,23 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        {/* 5 Services Grid */}
+        {/* 5 Services Balanced Grid (Row 1: 3 cards, Row 2: 2 cards centered & balanced) */}
         <div className="services-preview-grid">
           {SERVICES.map((service, index) => {
             const IconComponent = ICON_MAP[service.icon] || Code2;
             const delayClass = `reveal-delay-${(index % 3) + 1}`;
-            const isFeatured = index === 0;
+            const isBottomRow = index >= 3;
 
             return (
               <article
                 key={service.id}
-                className={`services-preview-card ${isFeatured ? 'services-preview-card--featured' : ''} reveal-on-scroll ${delayClass}`}
+                className={`services-preview-card ${isBottomRow ? 'services-preview-card--wide' : ''} reveal-on-scroll ${delayClass}`}
               >
-                <div className="services-preview-card__accent" />
-
                 <div className="services-preview-card__top">
-                  <span className="services-preview-card__cat">{service.category}</span>
                   <div className="services-preview-card__icon-wrap">
                     <IconComponent size={22} className="services-preview-card__icon" />
                   </div>
+                  <span className="services-preview-card__cat">{service.category}</span>
                 </div>
 
                 <h3 className="services-preview-card__title">{service.title}</h3>
@@ -85,6 +84,11 @@ export function ServicesPreview() {
                     </div>
                   </div>
                 )}
+
+                <Link to="/services" className="services-preview-card__link">
+                  <span>Explore Offering</span>
+                  <ArrowRight size={14} className="link-arrow" />
+                </Link>
               </article>
             );
           })}

@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Services Page Styles
-   Premium card grid with accent borders, tech tags, and smooth interactions.
+   Services Page Styles - M.S SOLUTIONS
+   Premium card grid with balanced 6-column math, elevated cards, and smooth interactions.
    ========================================================================== */
 
 /* Page Wrapper */
@@ -13,13 +13,13 @@
    Hero Header
    -------------------------------------------------------------------------- */
 .services-hero {
-  padding-top: clamp(20px, 2.5vw, 32px);
+  padding-top: clamp(28px, 3vw, 44px);
   padding-bottom: clamp(var(--space-6), 3vw, var(--space-10));
   text-align: center;
 }
 
 .services-hero__content {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -28,23 +28,26 @@
 }
 
 .services-hero__title {
-  font-size: clamp(2rem, 4vw + 0.5rem, 3.25rem);
+  font-family: var(--font-family-display);
+  font-size: clamp(2.25rem, 4vw + 0.5rem, 3.25rem);
+  font-weight: 700;
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
+  letter-spacing: -0.03em;
 }
 
 .services-hero__lead {
   font-size: clamp(1rem, 1.2vw + 0.5rem, 1.15rem);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
-  max-width: 620px;
+  max-width: 650px;
 }
 
 /* --------------------------------------------------------------------------
    Services Grid
    -------------------------------------------------------------------------- */
 .services-grid-section {
-  padding-bottom: var(--space-16);
+  padding-bottom: var(--space-20);
 }
 
 .services-grid {
@@ -59,15 +62,23 @@
 .service-card {
   position: relative;
   background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-2xl);
   padding: var(--space-8);
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   overflow: hidden;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 35px -4px rgba(2, 132, 199, 0.12);
 }
 
 /* Top accent line */
@@ -76,95 +87,85 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: transparent;
-  transition: background var(--transition-normal);
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(2, 132, 199, 0.35);
-  box-shadow:
-    0 20px 44px -10px rgba(15, 23, 42, 0.1),
-    0 0 28px rgba(2, 132, 199, 0.08);
-}
-
-.service-card:hover .service-card__accent {
-  background: var(--gradient-sky-accent);
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
 }
 
 /* Category Label */
 .service-card__category {
-  font-size: 0.7rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-wider);
   text-transform: uppercase;
-  color: #000000;
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
   width: fit-content;
 }
 
 /* Icon Wrapper */
 .service-card__icon-wrap {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: var(--radius-lg);
-  background: rgba(2, 132, 199, 0.07);
-  border: 1px solid rgba(2, 132, 199, 0.18);
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-normal);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.25);
+  transition: transform 0.25s ease;
 }
 
 .service-card:hover .service-card__icon-wrap {
-  background: var(--color-sky-500);
-  border-color: var(--color-sky-500);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.3);
+  transform: scale(1.08);
 }
 
 .service-card__icon {
-  color: var(--color-sky-500);
-  transition: color var(--transition-fast);
-}
-
-.service-card:hover .service-card__icon {
   color: #ffffff;
 }
 
 /* Title & Description */
 .service-card__title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  font-weight: 700;
   color: var(--color-text-primary);
   line-height: var(--line-height-snug);
+  letter-spacing: -0.02em;
 }
 
 .service-card__desc {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
 /* Features List */
 .service-card__features {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-2);
   padding-top: var(--space-2);
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
   flex-grow: 1;
 }
 
 .service-card__feature {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
-  line-height: var(--line-height-snug);
+  gap: var(--space-2);
+  font-size: 0.825rem;
+  color: #334155;
+  line-height: 1.45;
 }
 
 .service-card__feature-icon {
-  color: var(--color-sky-400);
+  color: #0284c7;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -174,16 +175,16 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  padding-top: var(--space-3);
-  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--space-4);
+  border-top: 1px solid #f1f5f9;
 }
 
 .service-card__tech-label {
   font-size: 0.68rem;
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-wider);
   text-transform: uppercase;
-  color: var(--color-text-tertiary);
+  color: #64748b;
 }
 
 .service-card__tech-tags {
@@ -195,20 +196,14 @@
 .service-card__tech-tag {
   display: inline-flex;
   align-items: center;
-  font-size: 0.72rem;
-  font-weight: var(--font-weight-medium);
-  color: var(--color-sky-600);
-  background: rgba(2, 132, 199, 0.07);
-  border: 1px solid rgba(2, 132, 199, 0.18);
-  padding: 0.3rem 0.7rem;
-  border-radius: var(--radius-full);
-  letter-spacing: 0.02em;
-  transition: all var(--transition-fast);
-}
-
-.service-card:hover .service-card__tech-tag {
-  background: rgba(2, 132, 199, 0.12);
-  border-color: rgba(2, 132, 199, 0.3);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.01em;
 }
 
 /* Card CTA */
@@ -220,20 +215,20 @@
    Bottom CTA Section
    -------------------------------------------------------------------------- */
 .services-cta {
-  padding-bottom: clamp(110px, 12vw, 160px);
+  padding-bottom: clamp(100px, 10vw, 140px);
 }
 
 .services-cta__card {
-  background: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-2xl);
   padding: clamp(var(--space-8), 5vw, var(--space-12));
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
   justify-content: space-between;
   align-items: flex-start;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.06);
 }
 
 .services-cta__content {
@@ -244,7 +239,11 @@
 }
 
 .services-cta__title {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
   color: var(--color-text-primary);
+  letter-spacing: -0.02em;
 }
 
 .services-cta__desc {
@@ -254,11 +253,18 @@
 }
 
 /* --------------------------------------------------------------------------
-   Responsive Breakpoints
+   Responsive Breakpoints with Balanced 6-Column Math
    -------------------------------------------------------------------------- */
 @media (min-width: 640px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card:nth-child(5) {
+    grid-column: span 2;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -271,6 +277,19 @@
 
 @media (min-width: 1024px) {
   .services-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .service-card:nth-child(1),
+  .service-card:nth-child(2),
+  .service-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .service-card:nth-child(4),
+  .service-card:nth-child(5) {
+    grid-column: span 3;
+    max-width: 100%;
+    margin: 0;
   }
 }
